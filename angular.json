@@ -121,8 +121,16 @@
               "devServerTarget": "sanitary-online:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "sanitary-online"
+    }
+  },
+  "defaultProject": "sanitary-online",
+  "cli": {
+    "analytics": "f6506578-0824-4cc2-9d2f-211ed68d82bd"
+  }
 }

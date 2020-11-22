@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-chat-54e71": {
+      "hosting": {
+        "sanitary-online": [
+          "fir-chat-54e71"
+        ]
+      }
+    }
+  }
+}
