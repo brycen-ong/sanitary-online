@@ -1,0 +1,116 @@
+<mat-toolbar class="top-nav">
+  <div class="nav-left">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="logo" [routerLink]="['/main']">S</span>
+  </div>
+
+  <div class="nav-search">
+    <mat-form-field appearance="fill">
+      <input class="search-input" matInput type="search" placeholder="Search for a Product">
+      <mat-icon class="search-icon" matSuffix >search</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="nav-right">
+    <button mat-icon-button [routerLink]="['/cart']" (click)="sidenav.close()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav fixedInViewport>
+    <button mat-button style="height: 0; position: absolute;"> <!-- 'absorbs' the auto-focus behavior -->
+    </button>
+    <div class="sidenav-container">
+      <button mat-flat-button>
+        <div class="sidenav-item">
+          <mat-icon>person</mat-icon>
+          Account Details
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button [routerLink]="['/main']" (click)="sidenav.close()">
+        <div class="sidenav-item">
+          <mat-icon>home</mat-icon>
+          Home
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button [routerLink]="['/cart']" (click)="sidenav.close()">
+        <div class="sidenav-item">
+          <mat-icon>shopping_cart</mat-icon>
+          Cart
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+      <mat-expansion-panel hideToggle="false">
+        <mat-expansion-panel-header>
+          <div class="sidenav-item">
+            <mat-icon>category</mat-icon>
+            Categories
+          </div>
+        </mat-expansion-panel-header>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>local_dining</mat-icon>
+            Food
+          </div>
+        </button>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>local_cafe</mat-icon>
+            Beverages
+          </div>
+        </button>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>local_bar</mat-icon>
+            Alcohol
+          </div>
+        </button>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>soap</mat-icon>
+            Hygiene
+          </div>
+        </button>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>sanitizer</mat-icon>
+            Disinfectants
+          </div>
+        </button>
+        <button mat-flat-button (click)="sidenav.close()">
+          <div class="sidenav-item">
+            <mat-icon>local_laundry_service</mat-icon>
+            Household Items
+          </div>
+        </button>
+      </mat-expansion-panel>
+      <mat-divider></mat-divider>
+      <button mat-flat-button [routerLink]="['/']" (click)="sidenav.close()">
+        <div class="sidenav-item">
+          <mat-icon>help</mat-icon>
+          Help
+        </div>
+      </button>
+      <div class="login-container">
+        <button mat-flat-button [routerLink]="['/signin']" (click)="sidenav.close()" *ngIf="!isUser">
+          <div class="sidenav-item">
+            <mat-icon>login</mat-icon>
+            Log In
+          </div>
+        </button>
+        <button mat-flat-button (click)="signOut()" *ngIf="isUser">
+          <div class="sidenav-item">
+            <mat-icon class="flipped">login</mat-icon>
+            Log Out
+          </div>
+        </button>
+      </div>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>

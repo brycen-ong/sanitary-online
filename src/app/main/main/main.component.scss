@@ -1,0 +1,31 @@
+.sale-card,
+.main-card{
+  margin-top: 10px;
+  .card-title{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    .card-name{
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .card-expand{
+      font-size: 12px;
+      color: gray;
+      cursor: pointer;
+    }
+  }
+  .card-product-container{
+    margin-top: 10px;
+    display: flex;
+    overflow: auto;
+    .card-product{
+      background-color: gray;
+      min-width: 100px;
+      max-width: 150px;
+      height: 250px;
+      overflow: hidden;
+      margin-right: 5px;
+    }
+  }
+}

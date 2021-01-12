@@ -1,0 +1,48 @@
+.signin-container{
+  background-color: #3c6ee1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form-card{
+    padding: 0;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form-container{
+      min-width: 280px;
+      max-width: 320px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .form-fields{
+        width: 80%;
+        .full{
+          width: 100%;
+        }
+      }
+      .forgot{
+        margin-bottom: 30px;
+        padding-right: 75px;
+      }
+      a{
+        color: #3c6ee1;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      button{
+        color: white;
+        background-color: #3c6ee1;
+        width: 45%;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

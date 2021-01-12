@@ -1,0 +1,26 @@
+<div class="page-container">
+  <mat-card class="main-card">
+    <div class="card-title">
+      <div class="card-name">Available Products</div>
+      <div class="card-expand">SEE ALL</div>
+    </div>
+    <div class="card-product-container">
+      <div *ngFor="let product of sample" class="card-product">
+        <img>
+        <div class="product-name">{{ product }}</div>
+      </div>
+    </div>
+  </mat-card>
+  <mat-card class="sale-card">
+    <div class="card-title">
+      <div class="card-name">On Sale</div>
+      <div class="card-expand">SEE ALL</div>
+    </div>
+    <div class="card-product-container">
+      <div *ngFor="let product of sample" class="card-product">
+        <img>
+        <div class="product-name">{{ product }}</div>
+      </div>
+    </div>
+  </mat-card>
+</div>

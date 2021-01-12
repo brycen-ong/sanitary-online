@@ -1,0 +1,23 @@
+<div class="signin-container">
+  <mat-card class="form-card">
+    <h1>Welcome!</h1>
+    <h4>Sign in to your account</h4>
+    <form [formGroup]="signInForm">
+      <div class="form-container">
+        <div class="form-fields">
+          <mat-form-field appearance="outline" class="full">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+          </mat-form-field>
+        </div>
+        <div class="forgot"><a [routerLink]="['/forgot']">Forgot your password?</a></div>
+        <button mat-raised-button (click)="signIn(signInForm.value)">Sign In</button>
+        <div>Don't have an account?<a [routerLink]="['/signup']"> Register now!</a></div>
+      </div>
+    </form>
+  </mat-card>
+</div>
