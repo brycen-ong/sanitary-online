@@ -10,17 +10,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // components
 import { NavComponent } from './nav/nav.component';
-import { MainComponent } from './main/main/main.component';
-import { CartComponent } from './main/cart/cart.component';
-import { SigninComponent } from './main/signin/signin.component';
-import { SignupComponent } from './main/signup/signup.component';
-import { ForgotpasswordComponent } from './main/forgotpassword/forgotpassword.component';
+import { MainComponent } from './main/main.component';
+import { CartComponent } from './cart/cart.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
 
 // angularFire
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ProductCardBaseComponent } from './shared/components/product-card-base/product-card-base.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     SigninComponent,
     SignupComponent,
     ForgotpasswordComponent,
+    ProductCardBaseComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,

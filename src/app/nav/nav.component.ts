@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
-import { AccountModel } from '../shared/models/account.model';
+import { Account } from '../shared/interfaces/account.interface';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +10,7 @@ import { AccountModel } from '../shared/models/account.model';
 })
 export class NavComponent implements OnInit {
 
-  user: AccountModel;
+  user: Account;
   isUser: boolean;
 
   constructor(

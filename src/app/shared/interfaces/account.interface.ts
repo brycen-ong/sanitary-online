@@ -1,4 +1,4 @@
-export class AccountModel{
+export class Account{
   address?: {
     barangay?: string;
     city?: string;
