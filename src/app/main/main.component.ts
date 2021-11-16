@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../shared/services/auth.service';
-import { AccountModel } from '../../shared/models/account.model';
+import { AuthService } from '../shared/services/auth.service';
+import { Account } from '../shared/interfaces/account.interface';
+import { mainProductBase } from '../shared/mocks/product.mock';
 
 @Component({
   selector: 'app-main',
@@ -9,8 +10,8 @@ import { AccountModel } from '../../shared/models/account.model';
 })
 export class MainComponent implements OnInit {
 
-  sample = ['sample1', 'sample2', 'sample3', 'sample4', 'sample5', 'sample6'];
-  user: AccountModel;
+  mainProductBase = mainProductBase;
+  user: Account;
   isUser: boolean;
 
   constructor(
@@ -27,5 +28,4 @@ export class MainComponent implements OnInit {
       }
     })
   }
-
 }

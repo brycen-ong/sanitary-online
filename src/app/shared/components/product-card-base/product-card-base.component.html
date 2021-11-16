@@ -1,0 +1,11 @@
+<mat-card class="card-base">
+	<div class="card-title">
+		<div class="card-name">{{ productBase.title }}</div>
+		<div class="card-expand">
+			<button mat-flat-button>SEE ALL</button>
+		</div>
+	</div> 
+	<div class="card-product-container">
+		<app-product-card *ngFor="let product of productBase.products" [productCard]="product"></app-product-card>
+	</div>
+</mat-card>

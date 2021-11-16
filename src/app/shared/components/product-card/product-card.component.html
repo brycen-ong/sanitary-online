@@ -1,0 +1,10 @@
+<mat-card class="card-base">
+  <div class="card-title">
+    <div class="card-name">{{ productCard.name }}</div>
+    <div class="card-price"> {{ productCard.price }} </div>
+    <div class="sale-price"> {{ productCard.salePrice }} </div>
+    <img [src]="productCard.imgUrl">
+    <div class="card-ratings"> {{ productCard.ratings }} </div>
+    <button mat-raised-button> {{ productCard.actionButton }} </button>
+  </div>
+</mat-card>
